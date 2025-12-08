@@ -9,3 +9,4 @@ function my_second_function(){
     sentence += "will chance after clicking it!";
     document.getElementById("concatenate").innerHTML = sentence;
 }
+//
