@@ -1,3 +1,9 @@
+// CONCATENTATE FUNCTION
+function my_second_function() {
+    var sentence = "Five is the same as ";
+    sentence += 5;
+    document.getElementById("concatenate").innerHTML = sentence;
+}
 //TYPE OF
 function type_of() {
     document.getElementById("typeof").innerHTML = (typeof 5);
@@ -45,9 +51,11 @@ document.write(1 < 3 && 3 > 5)
 document.write(1 < 3 || 3 > 5)
 document.write(1 > 3 || 3 > 5)
 
-not_function() ;
-    document.getElementById("not").innerHTML = !(5 < 3);
-
-not_function() ;
-    document.getElementById("not").innerHTML = !(5 > 3);
-
+function not_function1() {
+    var not1 = !(5 < 3)
+    document.getElementById("not1").innerHTML = not1;
+}
+function not_function2() {
+    var not2 = !(5 > 3)
+    document.getElementById("not2").innerHTML = not2;
+}
