@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Pizza Drill Demo</title>
+    <META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--JS-->
+    <script src="Pizza_JavaScript/Pizza.js" defer></script>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css">
+</head>
+
+<body>
+    <!--MENU PAGE-->
+    <div id="menuBG">
+        <h1 style="margin: 0 0px 0 20px;">Pizza Drill Tutorial</h1>
+        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+        <!--ORDER MENU-->
+        <form id="frmMenu" class="container-menu">
+            <!--PIZZA SIZES-->
+            <div class="menu left">
+                <h3>Size:</h3>
+                <input class="size" type="radio" name="Size" value="Single Slice">Single Slice <br>
+                <input class="size" type="radio" name="Size" value="Personal Pizza">Personal Pizza <br>
+                <input class="size" type="radio" name="Size" value="Medium Pizza">Medium Pizza <br>
+                <input class="size" type="radio" name="Size" value="Large Pizza" checked>Large Pizza <br>
+                <input class="size" type="radio" name="Size" value="Extra Large Pizza">Extra Large Pizza <br>
+            </div>
+            <!--VEGETABLE TOPPINGS-->
+            <div class="menu center">
+                <h3>Veggies:</h3>
+                <input class="toppingsV" type="checkbox" name="ToppingV" value="Jalapenos">Jalapenos <br>
+                <input class="toppingsV" type="checkbox" name="ToppingV" value="Mushrooms">Mushrooms <br>
+                <input class="toppingsV" type="checkbox" name="ToppingV" value="Onions">Onions <br>
+                <input class="toppingsV" type="checkbox" name="ToppingV" value="Tomatoes">Tomatoes <br>
+                <input class="toppingsV" type="checkbox" name="ToppingV" value="Olives">Olives <br>
+                <input class="toppingsV" type="checkbox" name="ToppingV" value="Green Peppers">Green Peppers <br>
+            </div>
+            <!--MEAT TOPPINGS-->
+            <div class="menu right">
+                <h3>Meats:</h3>
+                <input class="toppingsM" type="checkbox" name="ToppingM" value="Salami">Salami <br>
+                <input class="toppingsM" type="checkbox" name="ToppingM" value="Pepperoni">Pepperoni <br>
+                <input class="toppingsM" type="checkbox" name="ToppingM" value="Sausage">Sausage <br>
+                <input class="toppingsM" type="checkbox" name="ToppingM" value="Bacon">Bacon <br>
+                <input class="toppingsM" type="checkbox" name="ToppingM" value="Ground Beef">Ground Beef <br>
+                <input class="toppingsM" type="checkbox" name="ToppingM" value="Anchovy">Anchovy <br>
+                <input class="toppingsM" type="checkbox" name="ToppingM" value="Chicken">Chicken <br>
+            </div>
+            <!--CART-->
+            <div id="cart" class="container-cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
