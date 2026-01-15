@@ -37,11 +37,11 @@ function getReceipt() {
 function getTopping(runningTotal, text1) {
     var toppingTotal = 0;
     var selectedTopping = [];
-    var toppingArray = document.getElementsByClassName("toppingsM");
+    var toppingArray = document.getElementsByClassName("toppings");
     for (var j = 0; j < toppingArray.length; j++) {
         if (toppingArray[j].checked) {
             selectedTopping.push(toppingArray[j].value);
-            console.log("selected toppingM item: (" + toppingArray[j].value+")");
+            console.log("selected topping item: (" + toppingArray[j].value+")");
             text1 = text1 + toppingArray[j].value + "<br>";
         }
     }
@@ -54,36 +54,10 @@ function getTopping(runningTotal, text1) {
     }
     runningTotal = (runningTotal + toppingTotal);
     console.log("total selected topping items: " + toppingCount)
-    console.log(toppingCount + " toppingM-1 free topping= " + "$" + toppingTotal + ".00");
-    console.log("toppingM text1: " + text1);
+    console.log(toppingCount + " topping-1 free topping= " + "$" + toppingTotal + ".00");
+    console.log("topping text1: " + text1);
     console.log("Purchase Total: " + "$" + runningTotal + ".00");
     document.getElementById("showText").innerHTML = text1;
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong><h3>";
 };
 
-function getTopping(runningTotal, text1) {
-    var toppingTotal = 0;
-    var selectedTopping = [];
-    var toppingArray = document.getElementsByClassName("toppingsV");
-    for (var k = 0; k < toppingArray.length; k++) {
-        if (toppingArray[k].checked) {
-            selectedTopping.push(toppingArray[k].value);
-            console.log("selected toppingV item: (" + toppingArray[k].value+")");
-            text1 = text1 + toppingArray[k].value + "<br>";
-        }
-    }
-    var toppingCount = selectedTopping.length;
-    if (toppingCount > 1) {
-        toppingTotal = (toppingTotal - toppingCount);
-    }
-    else {
-        toppingTotal = 0;
-    }
-    runningTotal = (runningTotal + toppingTotal);
-    console.log("total selected toppingV items: " + toppingCount)
-    console.log(toppingCount + " toppingV-1 free topping= " + "$" + toppingTotal + ".00");
-    console.log("toppingV text1: " + text1);
-    console.log("Purchase Total: " + "$" + runningTotal + ".00");
-    document.getElementById("showText").innerHTML = text1;
-    document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong><h3>";
-};
