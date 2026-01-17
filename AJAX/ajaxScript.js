@@ -9,7 +9,7 @@ function getMsg() {
 
     //Function to display user input value once request
     //has been received
-    axajRequest.onload = function () {
+    ajaxRequest.onload = function () {
         document.getElementById("tkuMsg").innerHTML = "Thank you " + 
         inputVal + " for signing up!";
     }
