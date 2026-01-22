@@ -1,0 +1,175 @@
+body {
+    opacity: 1;
+    transition: 1.5s opacity;
+}
+
+/*Allows background color to fade out with JS assist*/
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/*Changes document background color*/
+html {
+    background-color: lightgreen;
+    scroll-behavior: smooth;
+}
+
+/*FORM*/
+
+    {
+    box-sizing: border-box
+}
+
+;
+
+
+/*Popup form hidden by default*/
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/*Adds styling to form container*/
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/*Full width inputs*/
+.form-container input[type=text],
+.form-container input[type=tel] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/*For input focus*/
+.form-container input[type=text]:focus,
+.form-container input[type=tel]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/*BUTTONS*/
+/*Button used to open the form*/
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    margin-top: 5px;
+    margin-left: 25px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: relative;
+    bottom: 23px;
+    right: 28px;
+    width: 230px;
+}
+
+/*Another button used to open the form*/
+.contact-button {
+    background-color: blue;
+    color: white;
+    padding: 16px 20px;
+    margin-top: 15px;
+    margin-left: 25px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: relative;
+    bottom: 23px;
+    right: 28px;
+    width: 230px;
+    float: right;
+}
+
+/*Styling for submit and close buttons*/
+.form-container .btn {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+/*Gives animation to h3 element*/
+h3 {
+    position: relative;
+    animation: mymove 3s;
+    float: right;
+    margin-right: 5px;
+    padding: 2px 2px 2px 2px;
+}
+
+@keyframes mymove {
+    from {
+        top: 300px;
+    }
+
+    to {
+        top: 100px;
+    }
+}
+
+/*Gives zoom in and out effect on selected image*/
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.img1 {
+    animation: zoominoutsinglefeatured 10s forwards;
+    float: right;
+    margin-bottom: 5px;
+    margin-top: 250px;
+}
+
+/*Slideshow*/
+/*Creates a simple slideshow from selected images*/
+#slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-top: 750px;
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}

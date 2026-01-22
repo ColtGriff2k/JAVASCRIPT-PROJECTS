@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Advanced JS-->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="React_3.css">
+    <!--Basic JS-->
+    <script src="React_3.js"></script>
+</head>
+
+<body>
+    <!--Returns h1 element message onscreen-->
+    <div id="JSX"></div>
+    <script type="text/babel">
+        class Greeting extends React.Component {
+            render() {
+                return <h1>Hello, World!</h1>
+            }
+        }
+        ReactDOM.render(<Greeting />, document.getElementById('JSX'))
+    </script>
+    <p style="font-size: 3vw">We're using React.js</p>
+    <!--Inline script prevents flickering on pageLoad-->
+    <script>
+        document.body.classList.add('fade-out');
+    </script>
+    <a href="#slideshow"><strong>See more images below: </strong></a><br><br><br>
+    <h3>Please click Open to fill out form: </h3>
+    <!--Contact Form-->
+    <button class="open-button" onclick="openForm()">Open</button>
+    <div class="form-popup" id="myForm">
+        <form name="aForm" action="/action_page.php" onsubmit="return validateForm()" method="post"
+            class="form-container">
+            <label for="FirstName">First Name:</label><br><input type="text" id="FirstName" name="FirstName"><br>
+            <label for="LastName">Last Name:</label><br><input type="text" id="LastName" name="LastName"><br>
+            <label for="phoneNumber">Phone Number:</label><br><input type="tel" id="phoneNumber" name="phoneNumber"
+                pattern="[0-9]"><br>
+            <input type="submit" value="Submit" class="btn"><br>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!--Images-->
+    <img class="img1" src="images/javascript.png"><br><br><br>
+    <div id="slideshow">
+        <div>
+            <img class="imgs" src="images/jquery.png">
+        </div>
+        <div>
+            <img class="imgs" src="images/cartoonjs.jpg">
+        </div>
+        <div>
+            <img class="imgs" src="images/alljava.png">
+        </div>
+    </div>
+    <hr><!--Horizontal Rule-->
+    <!--Footer-->
+    <!--Contact Button-->
+    <button class="contact-button" onclick="openForm()">Contact</button>
+</body>
+
+</html>
